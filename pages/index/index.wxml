@@ -18,7 +18,7 @@
         <view class="page__bd">
           <view class="section section_gap">
             <radio-group class="radio-group" bindchange="radioChange">
-              <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{items.checked}}">
+              <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
               <view>
                 <text>{{item.value}}</text>
               </view>
@@ -46,7 +46,7 @@
             <radio-group class="radio-group2" bindchange="radioChange">
               <view class='huanhang'>
               <!--前两个选项 第一行-->
-                <radio class="radio" wx:for-items="{{items0}}" wx:key="name" value="{{item.name}}" >
+                <radio class="radio" wx:for-items="{{items0}}" wx:key="name" value="{{item.name}}"  checked="{{item.checked}}" >
                 <view class='tupianxx'>
                  <text class='tupianxx1'>{{item.op}}</text>
                  <view class='tupianxx2'  style="background-image: url({{item.value}});background-size: 100% 100%"></view>
@@ -55,7 +55,7 @@
               </view>
               <!--后两个选项  第二行-->
               <view class='huanhang'>
-              <radio class="radio" wx:for-items="{{items1}}" wx:key="name" value="{{item.name}}" >
+              <radio class="radio" wx:for-items="{{items1}}" wx:key="name" value="{{item.name}}" checked="{{item.checked}}">
                 <view class='tupianxx'>
                  <text class='tupianxx1'>{{item.op}}</text>
                  <view class='tupianxx2'  style="background-image: url({{item.value}});background-size: 100% 100%"></view>
@@ -769,9 +769,19 @@
 
 
 
-
+<view class='shangxia'>
   <!--button-->
-  <button class='startAnswer' hover-class='click' bindtap='next'>
-    {{anniu}}
+
+  <button class='shangyiti' hover-class='click' bindtap='previous'>
+    {{anniu1}}
+  </button>
+
+  <button class='xiayiti' hover-class='click' bindtap='next'>
+    {{anniu2}}
   </button> 
+</view>
+
+<block wx:if="{{anniu3==1}}">
+  <button  bindtap="mydata" class="save-btn" hover-class='click'>点击查看之前的选择</button>
+</block>
 </view>

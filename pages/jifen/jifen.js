@@ -13,17 +13,27 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    count = app.globalDate.sum;
-    count = count*5;
-    if(count != 100)
-      this.setData({ point: count});
-    else if(count ==100)
-    {
-      
-      this.setData({ point: 'SS' });
+    let cmp = wx.getStorageSync('complete');
+    if(cmp != 1){
+      count = app.globalDate.sum;
+      count = count*5;
+      if(count != 100)
+        this.setData({ point: count});
+      else if(count ==100)
+      {
+        
+        this.setData({ point: 'SS' });
+      }
+      wx.setStorageSync('complete', 1);
+      wx.setStorageSync('score', count)
+    }else if(cmp == 1){
+      let score = wx.getStorageSync('score');
+      if (score != 100)
+        this.setData({ point: score });
+      else if (score == 100) {
+        this.setData({ point: 'SS' });
+      }
     }
-    wx.setStorageSync('complete', 1);
-    wx.setStorageSync('score', count)
   },
 
   /**

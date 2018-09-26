@@ -2,8 +2,10 @@
   "cloud": true,
   "pages": [
     "pages/authorize/zhuce",
-    "pages/jifen/jifen",
-    "pages/index/index"
+    "pages/index/index",
+    
+    "pages/jifen/jifen"
+   
     
     
     
