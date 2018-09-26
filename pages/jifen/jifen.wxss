@@ -1,0 +1,38 @@
+.bg{
+  width: 100%;
+  height: 1334rpx;
+  margin: 0rpx ;
+  background: url('https://moetu.fastmirror.org/images/2018/09/23/jifen8d4690ae072d5e18.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.head1{
+  width: 100%;
+  height: 90rpx;
+  text-align: center;
+}
+
+.con{
+  font-size: 50rpx;
+  font-weight: 600;
+}
+.fenshu1{
+  width: 100%;
+  height: 200rpx;
+
+}
+.fenshu2{
+  width: 200rpx;
+  height: 200rpx;
+  margin: 10rpx auto;
+  text-align: center;
+
+}
+
+.fenshu3{
+  
+  font-size: 150rpx;
+  margin-top: 35rpx;
+}

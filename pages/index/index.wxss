@@ -1,0 +1,316 @@
+.startAnswer{
+  font-size: 40rpx;
+  background-color: #1bd0bd;
+  width: 250rpx;
+  height: 80rpx;
+  border-radius: 20rpx;
+  color: #ffffff;
+  
+  text-align: center;
+  justify-content:center;
+  display:flex;
+  align-items:center;
+  margin: 20rpx 50rpx 0rpx 400rpx;
+  
+  
+}
+
+.title{
+  clear: both;
+  font-size: 35rpx;
+  margin: 30rpx 0rpx 0rpx 20rpx;
+  border-bottom: 2px solid #ddd;
+}
+
+.radio-group {
+    border-bottom: 1px;
+}
+
+.radio-group2 {
+    border-bottom: 1px;
+    display: flex;
+    flex-direction: column;
+}
+.radio {
+    display: block;
+    border-top: 1px;
+    padding: 5px;
+   
+   
+}
+
+.container {
+  width: 95%;
+  height: auto;
+  margin: 10rpx auto;
+  border-radius: 20rpx;
+  background-color: #54afec;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+ 
+} 
+
+.title_text{
+  font-size: 50rpx;
+  width: 95%;
+  height: 150rpx;
+  margin: 40rpx auto;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+  background: url('https://moetu.fastmirror.org/images/2018/09/23/head2aa01d025d738f09.png');
+  background-size: cover;
+  
+}
+
+.title_contain{
+  font-size: 50rpx;
+  margin: 30rpx auto;
+  text-align: center;
+}
+
+.bg{
+  width: 100%;
+  height: 2000rpx;
+  margin: 0rpx ;
+  background: url(https://moetu.fastmirror.org/images/2018/09/19/bgaf9eed51c487463f.png);
+  background-size: 100% auto;
+}
+
+.tianchong{
+  width: 100%;
+  height: 40rpx;
+}
+
+.page{
+  width: 100%;
+  margin: 0rpx 0rpx 50rpx 0rpx;
+}
+.tupianxx{
+  width: 276rpx;
+  height: 250rpx;
+  display: flex;
+  flex-direction: row;
+}
+.tupianxx1{
+  margin: 100rpx 0rpx 112rpx 0rpx ;
+}
+.tupianxx2{
+  width:250rpx;
+  height: 250rpx;
+}
+
+.huanhang{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.shibati{
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: row;
+}
+.shibatiwenzi{
+  margin-top: 150rpx;
+}
+.shibatitupian{
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.shiliuti{
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: row;
+}
+.shiliutiwenzi{
+  margin-top: 75rpx;
+}
+.shiliutitupian{
+  width: 200rpx;
+  height: 200rpx;
+}
+.kantuzuoti{
+  width: 90%;
+  height: 96%;
+  
+}
+.kantu{
+  width: 100%;
+  height: 280rpx;
+  margin-top:15rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kantu2{
+  width: 100%;
+  height: 140rpx;
+  margin-top:30rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.kantu3{
+  width: 100%;
+  height: 400rpx;
+  margin-top:30rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kantu4{
+  width: 100%;
+  height: 150rpx;
+  margin-top:30rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kantu5{
+  width: 100%;
+  height: 280rpx;
+  margin-top:30rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kantu6{
+  width: 100%;
+  height: 250rpx;
+  margin-top:30rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kantu7{
+  width: 100%;
+  height: 280rpx;
+  margin-top:30rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kantu8{
+  width: 100%;
+  height: 330rpx;
+  margin-top:30rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kantu9{
+  width: 100%;
+  height: 380rpx;
+  margin-top:30rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kantu10{
+  width: 100%;
+  height: 350rpx;
+  margin-top:30rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kantu11{
+  width: 100%;
+  height: 180rpx;
+  margin-top:30rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kantu12{
+  width: 100%;
+  height: 220rpx;
+  margin-top:30rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kantu14{
+  width: 100%;
+  height: 400rpx;
+  margin-top:30rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kantu15{
+  width: 100%;
+  height: 150rpx;
+  margin-top:30rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.kantu16{
+  width: 100%;
+  height: 300rpx;
+  margin-top:30rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.kantu17{
+  width: 100%;
+  height: 330rpx;
+  margin-top:30rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.kantu18{
+  width: 100%;
+  height: 400rpx;
+  margin-top:30rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kantu19{
+  width: 100%;
+  height: 270rpx;
+  margin-top:30rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kantu20{
+  width: 100%;
+  height: 230rpx;
+  margin-top:30rpx; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.click{
+  background-color: #c9b718;
+}

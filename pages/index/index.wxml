@@ -1,0 +1,777 @@
+<view class='bg'>
+  <view class='tianchong'></view>
+    <view class='title_text'>
+      <text class='title_contain'>Re:君の名は</text>
+    </view>
+<!--第一题模版-->
+  <template name="wordchoic">
+    <view class='container'>
+
+      <view class='kantu'>
+        <view class='kantuzuoti'  style="background-image: url({{link}});background-size: contain;background-repeat:no-repeat"></view>
+        </view>
+
+      <view class="page">
+        <view class='title'> 
+          <text>{{stem}}</text>          
+        </view>
+        <view class="page__bd">
+          <view class="section section_gap">
+            <radio-group class="radio-group" bindchange="radioChange">
+              <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{items.checked}}">
+              <view>
+                <text>{{item.value}}</text>
+              </view>
+              </radio>
+            </radio-group>
+          </view>
+        </view>
+      </view>
+    </view>
+  </template>
+<!--只使用图片做选项时的模版-->
+<template name="photochoic">
+  <view class='container'>
+
+    <view class='kantu'>
+        <view class='kantuzuoti'  style="background-image: url({{link}});background-size: contain;background-repeat:no-repeat" ></view>
+        </view>
+
+      <view class="page">
+        <view class='title'> 
+          <text>{{stem}}</text>
+        </view>
+        <view class="page__bd">
+          <view class="section section_gap">
+            <radio-group class="radio-group2" bindchange="radioChange">
+              <view class='huanhang'>
+              <!--前两个选项 第一行-->
+                <radio class="radio" wx:for-items="{{items0}}" wx:key="name" value="{{item.name}}" >
+                <view class='tupianxx'>
+                 <text class='tupianxx1'>{{item.op}}</text>
+                 <view class='tupianxx2'  style="background-image: url({{item.value}});background-size: 100% 100%"></view>
+                 </view>
+              </radio>
+              </view>
+              <!--后两个选项  第二行-->
+              <view class='huanhang'>
+              <radio class="radio" wx:for-items="{{items1}}" wx:key="name" value="{{item.name}}" >
+                <view class='tupianxx'>
+                 <text class='tupianxx1'>{{item.op}}</text>
+                 <view class='tupianxx2'  style="background-image: url({{item.value}});background-size: 100% 100%"></view>
+                 </view>
+              </radio>
+
+              </view>
+            </radio-group>
+          </view>
+        </view>
+      </view>
+    </view>
+</template>
+
+
+<!--第二题模版-->
+<template name="photochoic2">
+  <view class='container'>
+
+    <view class='kantu2'>
+        <view class='kantuzuoti'  style="background-image: url({{link}});background-size: contain;background-repeat:no-repeat" ></view>
+        </view>
+
+      <view class="page">
+        <view class='title'> 
+          <text>{{stem}}</text>
+        </view>
+        <view class="page__bd">
+          <view class="section section_gap">
+            <radio-group class="radio-group2" bindchange="radioChange">
+              <view class='huanhang'>
+              <!--前两个选项 第一行-->
+                <radio class="radio" wx:for-items="{{items0}}" wx:key="name" value="{{item.name}}" >
+                <view class='tupianxx'>
+                 <text class='tupianxx1'>{{item.op}}</text>
+                 <view class='tupianxx2'  style="background-image: url({{item.value}});background-size: 100% 100%"></view>
+                 </view>
+              </radio>
+              </view>
+              <!--后两个选项  第二行-->
+              <view class='huanhang'>
+              <radio class="radio" wx:for-items="{{items1}}" wx:key="name" value="{{item.name}}" >
+                <view class='tupianxx'>
+                 <text class='tupianxx1'>{{item.op}}</text>
+                 <view class='tupianxx2'  style="background-image: url({{item.value}});background-size: 100% 100%"></view>
+                 </view>
+              </radio>
+
+              </view>
+            </radio-group>
+          </view>
+        </view>
+      </view>
+    </view>
+</template>
+
+<!--第三题模版-->
+<template name="photochoic3">
+  <view class='container'>
+
+    <view class='kantu3'>
+        <view class='kantuzuoti'  style="background-image: url({{link}});background-size: contain;background-repeat:no-repeat" ></view>
+        </view>
+
+      <view class="page">
+        <view class='title'> 
+          <text>{{stem}}</text>
+        </view>
+        <view class="page__bd">
+          <view class="section section_gap">
+            <radio-group class="radio-group2" bindchange="radioChange">
+              <view class='huanhang'>
+              <!--前两个选项 第一行-->
+                <radio class="radio" wx:for-items="{{items0}}" wx:key="name" value="{{item.name}}" >
+                <view class='tupianxx'>
+                 <text class='tupianxx1'>{{item.op}}</text>
+                 <view class='tupianxx2'  style="background-image: url({{item.value}});background-size: 100% 100%"></view>
+                 </view>
+              </radio>
+              </view>
+              <!--后两个选项  第二行-->
+              <view class='huanhang'>
+              <radio class="radio" wx:for-items="{{items1}}" wx:key="name" value="{{item.name}}" >
+                <view class='tupianxx'>
+                 <text class='tupianxx1'>{{item.op}}</text>
+                 <view class='tupianxx2'  style="background-image: url({{item.value}});background-size: 100% 100%"></view>
+                 </view>
+              </radio>
+
+              </view>
+            </radio-group>
+          </view>
+        </view>
+      </view>
+    </view>
+</template>
+
+<!--第四题模版-->
+<template name="wordchoic4">
+    <view class='container'>
+
+      <view class='kantu4'>
+        <view class='kantuzuoti'  style="background-image: url({{link}});background-size: contain;background-repeat:no-repeat"></view>
+        </view>
+
+      <view class="page">
+        <view class='title'> 
+          <text>{{stem}}</text>          
+        </view>
+        <view class="page__bd">
+          <view class="section section_gap">
+            <radio-group class="radio-group" bindchange="radioChange">
+              <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{items.checked}}">
+              <view>
+                <text>{{item.value}}</text>
+              </view>
+              </radio>
+            </radio-group>
+          </view>
+        </view>
+      </view>
+    </view>
+  </template>
+
+  <!--第五题模版-->
+<template name="wordchoic5">
+    <view class='container'>
+
+      <view class='kantu5'>
+        <view class='kantuzuoti'  style="background-image: url({{link}});background-size: contain;background-repeat:no-repeat"></view>
+        </view>
+
+      <view class="page">
+        <view class='title'> 
+          <text>{{stem}}</text>          
+        </view>
+        <view class="page__bd">
+          <view class="section section_gap">
+            <radio-group class="radio-group" bindchange="radioChange">
+              <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{items.checked}}">
+              <view>
+                <text>{{item.value}}</text>
+              </view>
+              </radio>
+            </radio-group>
+          </view>
+        </view>
+      </view>
+    </view>
+  </template>
+<!--第六题模版-->
+  <template name="photochoic6">
+  <view class='container'>
+
+    <view class='kantu6'>
+        <view class='kantuzuoti'  style="background-image: url({{link}});background-size: contain;background-repeat:no-repeat" ></view>
+        </view>
+
+      <view class="page">
+        <view class='title'> 
+          <text>{{stem}}</text>
+        </view>
+        <view class="page__bd">
+          <view class="section section_gap">
+            <radio-group class="radio-group2" bindchange="radioChange">
+              <view class='huanhang'>
+              <!--前两个选项 第一行-->
+                <radio class="radio" wx:for-items="{{items0}}" wx:key="name" value="{{item.name}}" >
+                <view class='tupianxx'>
+                 <text class='tupianxx1'>{{item.op}}</text>
+                 <view class='tupianxx2'  style="background-image: url({{item.value}});background-size: 100% 100%"></view>
+                 </view>
+              </radio>
+              </view>
+              <!--后两个选项  第二行-->
+              <view class='huanhang'>
+              <radio class="radio" wx:for-items="{{items1}}" wx:key="name" value="{{item.name}}" >
+                <view class='tupianxx'>
+                 <text class='tupianxx1'>{{item.op}}</text>
+                 <view class='tupianxx2'  style="background-image: url({{item.value}});background-size: 100% 100%"></view>
+                 </view>
+              </radio>
+
+              </view>
+            </radio-group>
+          </view>
+        </view>
+      </view>
+    </view>
+</template>
+
+
+<!--第七题模版-->
+  <template name="wordchoic7">
+    <view class='container'>
+
+      <view class='kantu7'>
+        <view class='kantuzuoti'  style="background-image: url({{link}});background-size: contain;background-repeat:no-repeat"></view>
+        </view>
+
+      <view class="page">
+        <view class='title'> 
+          <text>{{stem}}</text>          
+        </view>
+        <view class="page__bd">
+          <view class="section section_gap">
+            <radio-group class="radio-group" bindchange="radioChange">
+              <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{items.checked}}">
+              <view>
+                <text>{{item.value}}</text>
+              </view>
+              </radio>
+            </radio-group>
+          </view>
+        </view>
+      </view>
+    </view>
+  </template>
+
+
+  <!--第八题模版-->
+<template name="photochoic8">
+  <view class='container'>
+
+    <view class='kantu8'>
+        <view class='kantuzuoti'  style="background-image: url({{link}});background-size: contain;background-repeat:no-repeat" ></view>
+        </view>
+
+      <view class="page">
+        <view class='title'> 
+          <text>{{stem}}</text>
+        </view>
+        <view class="page__bd">
+          <view class="section section_gap">
+            <radio-group class="radio-group2" bindchange="radioChange">
+              <view class='huanhang'>
+              <!--前两个选项 第一行-->
+                <radio class="radio" wx:for-items="{{items0}}" wx:key="name" value="{{item.name}}" >
+                <view class='tupianxx'>
+                 <text class='tupianxx1'>{{item.op}}</text>
+                 <view class='tupianxx2'  style="background-image: url({{item.value}});background-size: 100% 100%"></view>
+                 </view>
+              </radio>
+              </view>
+              <!--后两个选项  第二行-->
+              <view class='huanhang'>
+              <radio class="radio" wx:for-items="{{items1}}" wx:key="name" value="{{item.name}}" >
+                <view class='tupianxx'>
+                 <text class='tupianxx1'>{{item.op}}</text>
+                 <view class='tupianxx2'  style="background-image: url({{item.value}});background-size: 100% 100%"></view>
+                 </view>
+              </radio>
+
+              </view>
+            </radio-group>
+          </view>
+        </view>
+      </view>
+    </view>
+</template>
+
+<!--第九题模版-->
+<template name="photochoic9">
+  <view class='container'>
+
+    <view class='kantu9'>
+        <view class='kantuzuoti'  style="background-image: url({{link}});background-size: contain;background-repeat:no-repeat" ></view>
+        </view>
+
+      <view class="page">
+        <view class='title'> 
+          <text>{{stem}}</text>
+        </view>
+        <view class="page__bd">
+          <view class="section section_gap">
+            <radio-group class="radio-group2" bindchange="radioChange">
+              <view class='huanhang'>
+              <!--前两个选项 第一行-->
+                <radio class="radio" wx:for-items="{{items0}}" wx:key="name" value="{{item.name}}" >
+                <view class='tupianxx'>
+                 <text class='tupianxx1'>{{item.op}}</text>
+                 <view class='tupianxx2'  style="background-image: url({{item.value}});background-size: 100% 100%"></view>
+                 </view>
+              </radio>
+              </view>
+              <!--后两个选项  第二行-->
+              <view class='huanhang'>
+              <radio class="radio" wx:for-items="{{items1}}" wx:key="name" value="{{item.name}}" >
+                <view class='tupianxx'>
+                 <text class='tupianxx1'>{{item.op}}</text>
+                 <view class='tupianxx2'  style="background-image: url({{item.value}});background-size: 100% 100%"></view>
+                 </view>
+              </radio>
+
+              </view>
+            </radio-group>
+          </view>
+        </view>
+      </view>
+    </view>
+</template>
+
+<!--第十题模版-->
+  <template name="wordchoic10">
+    <view class='container'>
+
+      <view class='kantu10'>
+        <view class='kantuzuoti'  style="background-image: url({{link}});background-size: contain;background-repeat:no-repeat"></view>
+        </view>
+
+      <view class="page">
+        <view class='title'> 
+          <text>{{stem}}</text>          
+        </view>
+        <view class="page__bd">
+          <view class="section section_gap">
+            <radio-group class="radio-group" bindchange="radioChange">
+              <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{items.checked}}">
+              <view>
+                <text>{{item.value}}</text>
+              </view>
+              </radio>
+            </radio-group>
+          </view>
+        </view>
+      </view>
+    </view>
+  </template>
+
+<!--第十一题模版-->
+<template name="photochoic11">
+  <view class='container'>
+
+    <view class='kantu11'>
+        <view class='kantuzuoti'  style="background-image: url({{link}});background-size: contain;background-repeat:no-repeat" ></view>
+        </view>
+
+      <view class="page">
+        <view class='title'> 
+          <text>{{stem}}</text>
+        </view>
+        <view class="page__bd">
+          <view class="section section_gap">
+            <radio-group class="radio-group2" bindchange="radioChange">
+              <view class='huanhang'>
+              <!--前两个选项 第一行-->
+                <radio class="radio" wx:for-items="{{items0}}" wx:key="name" value="{{item.name}}" >
+                <view class='tupianxx'>
+                 <text class='tupianxx1'>{{item.op}}</text>
+                 <view class='tupianxx2'  style="background-image: url({{item.value}});background-size: 100% 100%"></view>
+                 </view>
+              </radio>
+              </view>
+              <!--后两个选项  第二行-->
+              <view class='huanhang'>
+              <radio class="radio" wx:for-items="{{items1}}" wx:key="name" value="{{item.name}}" >
+                <view class='tupianxx'>
+                 <text class='tupianxx1'>{{item.op}}</text>
+                 <view class='tupianxx2'  style="background-image: url({{item.value}});background-size: 100% 100%"></view>
+                 </view>
+              </radio>
+
+              </view>
+            </radio-group>
+          </view>
+        </view>
+      </view>
+    </view>
+</template>
+<!--第十二题模版-->
+<template name="wordchoic12">
+    <view class='container'>
+
+      <view class='kantu12'>
+        <view class='kantuzuoti'  style="background-image: url({{link}});background-size: contain;background-repeat:no-repeat"></view>
+        </view>
+
+      <view class="page">
+        <view class='title'> 
+          <text>{{stem}}</text>          
+        </view>
+        <view class="page__bd">
+          <view class="section section_gap">
+            <radio-group class="radio-group" bindchange="radioChange">
+              <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{items.checked}}">
+              <view>
+                <text>{{item.value}}</text>
+              </view>
+              </radio>
+            </radio-group>
+          </view>
+        </view>
+      </view>
+    </view>
+  </template>
+
+<!--13题专用模版-->
+<template name="wordchoic13">
+    <view class='container'>
+      <view class='kantu'>
+        <view class='kantuzuoti'  style="background-image: url('https://moetu.fastmirror.org/images/2018/09/21/307c06a5be29a1329.png');background-size: 100% 100%" ></view>
+        </view>
+
+      <view class="page">
+        <view class='title'> 
+          <text>{{stem}}</text>          
+        </view>
+        <view class="page__bd">
+          <view class="section section_gap">
+            <radio-group class="radio-group" bindchange="radioChange">
+              <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{items.checked}}">
+              <view>
+                <text>{{item.value}}</text>
+              </view>
+              </radio>
+            </radio-group>
+          </view>
+        </view>
+      </view>
+    </view>
+  </template>
+
+<!--第十四题模版-->
+<template name="wordchoic14">
+    <view class='container'>
+
+      <view class='kantu14'>
+        <view class='kantuzuoti'  style="background-image: url({{link}});background-size: contain;background-repeat:no-repeat"></view>
+        </view>
+
+      <view class="page">
+        <view class='title'> 
+          <text>{{stem}}</text>          
+        </view>
+        <view class="page__bd">
+          <view class="section section_gap">
+            <radio-group class="radio-group" bindchange="radioChange">
+              <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{items.checked}}">
+              <view>
+                <text>{{item.value}}</text>
+              </view>
+              </radio>
+            </radio-group>
+          </view>
+        </view>
+      </view>
+    </view>
+  </template>
+
+  <!--第十五题模版-->
+<template name="photochoic15">
+  <view class='container'>
+
+    <view class='kantu15'>
+        <view class='kantuzuoti'  style="background-image: url({{link}});background-size: contain;background-repeat:no-repeat" ></view>
+        </view>
+
+      <view class="page">
+        <view class='title'> 
+          <text>{{stem}}</text>
+        </view>
+        <view class="page__bd">
+          <view class="section section_gap">
+            <radio-group class="radio-group2" bindchange="radioChange">
+              <view class='huanhang'>
+              <!--前两个选项 第一行-->
+                <radio class="radio" wx:for-items="{{items0}}" wx:key="name" value="{{item.name}}" >
+                <view class='tupianxx'>
+                 <text class='tupianxx1'>{{item.op}}</text>
+                 <view class='tupianxx2'  style="background-image: url({{item.value}});background-size: 100% 100%"></view>
+                 </view>
+              </radio>
+              </view>
+              <!--后两个选项  第二行-->
+              <view class='huanhang'>
+              <radio class="radio" wx:for-items="{{items1}}" wx:key="name" value="{{item.name}}" >
+                <view class='tupianxx'>
+                 <text class='tupianxx1'>{{item.op}}</text>
+                 <view class='tupianxx2'  style="background-image: url({{item.value}});background-size: 100% 100%"></view>
+                 </view>
+              </radio>
+
+              </view>
+            </radio-group>
+          </view>
+        </view>
+      </view>
+    </view>
+</template>
+
+<!--第十六题模版-->
+  <template name="wordchoic16">
+    <view class='container'>
+
+      <view class='kantu18'>
+        <view class='kantuzuoti'  style="background-image: url({{link}});background-size: contain;background-repeat:no-repeat"></view>
+        </view>
+
+      <view class="page">
+        <view class='title'> 
+          <text>{{stem}}</text>          
+        </view>
+        <view class="page__bd">
+          <view class="section section_gap">
+            <radio-group class="radio-group" bindchange="radioChange">
+              <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{items.checked}}">
+              <view class='shiliuti'>
+                <text class='shiliutiwenzi'>{{item.value}}</text>
+                <view class='shiliutitupian' style="background-image: url({{item.tupian}});background-size: 100% 100%"></view>
+              </view>
+              </radio>
+            </radio-group>
+          </view>
+        </view>
+      </view>
+    </view>
+  </template>
+  
+<!--第十七题模版-->
+<template name="wordchoic17">
+    <view class='container'>
+
+      <view class='kantu17'>
+        <view class='kantuzuoti'  style="background-image: url({{link}});background-size: contain;background-repeat:no-repeat"></view>
+        </view>
+
+      <view class="page">
+        <view class='title'> 
+          <text>{{stem}}</text>          
+        </view>
+        <view class="page__bd">
+          <view class="section section_gap">
+            <radio-group class="radio-group" bindchange="radioChange">
+              <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{items.checked}}">
+              <view>
+                <text>{{item.value}}</text>
+              </view>
+              </radio>
+            </radio-group>
+          </view>
+        </view>
+      </view>
+    </view>
+  </template>
+
+  <!--第十八题模版-->
+  <template name="wordchoic18">
+    <view class='container'>
+
+      <view class='kantu18'>
+        <view class='kantuzuoti'  style="background-image: url({{link}});background-size: contain;background-repeat:no-repeat"></view>
+        </view>
+
+      <view class="page">
+        <view class='title'> 
+          <text>{{stem}}</text>          
+        </view>
+        <view class="page__bd">
+          <view class="section section_gap">
+            <radio-group class="radio-group" bindchange="radioChange">
+              <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{items.checked}}">
+              <view class='shibati'>
+                <text class='shibatiwenzi'>{{item.value}}</text>
+                <view class='shibatitupian' style="background-image: url({{item.tupian}});background-size: 100% 100%"></view>
+              </view>
+              </radio>
+            </radio-group>
+          </view>
+        </view>
+      </view>
+    </view>
+  </template>
+
+  <!--第十九题模版-->
+<template name="wordchoic19">
+    <view class='container'>
+
+      <view class='kantu19'>
+        <view class='kantuzuoti'  style="background-image: url({{link}});background-size: contain;background-repeat:no-repeat"></view>
+        </view>
+
+      <view class="page">
+        <view class='title'> 
+          <text>{{stem}}</text>
+          <image src='https://moetu.fastmirror.org/images/2018/09/23/19b324cea6885d7be5.png' style="width: 95%;height:110rpx;"></image>
+        </view>
+        <view class="page__bd">
+          <view class="section section_gap">
+            <radio-group class="radio-group" bindchange="radioChange">
+              <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{items.checked}}">
+              <view>
+                <text>{{item.value}}</text>
+              </view>
+              </radio>
+            </radio-group>
+          </view>
+        </view>
+      </view>
+    </view>
+  </template>
+
+  <!--第二十题模版-->
+<template name="wordchoic20">
+    <view class='container'>
+
+      <view class='kantu20'>
+        <view class='kantuzuoti'  style="background-image: url({{link}});background-size: contain;background-repeat:no-repeat"></view>
+        </view>
+
+      <view class="page">
+        <view class='title'> 
+          <text>{{stem}}</text>
+        </view>
+        <view class="page__bd">
+          <view class="section section_gap">
+            <radio-group class="radio-group" bindchange="radioChange">
+              <radio class="radio" wx:for-items="{{items}}" wx:key="name" value="{{item.name}}" checked="{{items.checked}}">
+              <view>
+                <text>{{item.value}}</text>
+              </view>
+              </radio>
+            </radio-group>
+          </view>
+        </view>
+      </view>
+    </view>
+  </template>
+<!--条件判断决定第几题-->
+  <!--第一题-->
+  <block wx:if="{{count==1}}">
+    <template is="wordchoic" data="{{...ques1}}"/>
+  </block>
+  <!--第二题-->
+  <block wx:elif="{{count==2}}">
+    <template is="photochoic2" data="{{...ques2}}"/>
+  </block>
+  <!--第三题-->
+  <block wx:elif="{{count==3}}">
+    <template is="photochoic3" data="{{...ques3}}"/>
+  </block>
+  <!--第四题-->
+  <block wx:elif="{{count==4}}">
+    <template is="wordchoic4" data="{{...ques4}}"/>
+  </block>
+  <!--第五题-->
+  <block wx:elif="{{count==5}}">
+    <template is="wordchoic5" data="{{...ques5}}"/>
+  </block>
+  <!--第六题-->
+  <block wx:elif="{{count==6}}">
+    <template is="photochoic6" data="{{...ques6}}"/>
+  </block>
+  <!--第七题-->
+  <block wx:elif="{{count==7}}">
+    <template is="wordchoic7" data="{{...ques7}}"/>
+  </block>
+  <!--第八题-->
+  <block wx:elif="{{count==8}}">
+    <template is="photochoic8" data="{{...ques8}}"/>
+  </block>
+  <!--第九题-->
+  <block wx:elif="{{count==9}}">
+    <template is="photochoic9" data="{{...ques9}}"/>
+  </block>
+  <!--第十题-->
+  <block wx:elif="{{count==10}}">
+    <template is="wordchoic10" data="{{...ques10}}"/>
+  </block>
+  <!--第十一题-->
+  <block wx:elif="{{count==11}}">
+    <template is="photochoic11" data="{{...ques11}}"/>
+  </block>
+  <!--第十二题-->
+  <block wx:elif="{{count==12}}">
+    <template is="wordchoic12" data="{{...ques12}}"/>
+  </block>
+  <!--第十三题-->
+  <block wx:elif="{{count==13}}">
+    <template is="wordchoic13" data="{{...ques13}}"/>
+  </block>
+  <!--第十四题-->
+  <block wx:elif="{{count==14}}">
+    <template is="wordchoic14" data="{{...ques14}}"/>
+  </block>
+  <!--第十五题-->
+  <block wx:elif="{{count==15}}">
+    <template is="photochoic15" data="{{...ques15}}"/>
+  </block>
+  <!--第十六题-->
+  <block wx:elif="{{count==16}}">
+    <template is="wordchoic16" data="{{...ques16}}"/>
+  </block>
+  <!--第十七题-->
+  <block wx:elif="{{count==17}}">
+    <template is="wordchoic17" data="{{...ques17}}"/>
+  </block>
+  <!--第十八题-->
+  <block wx:elif="{{count==18}}">
+    <template is="wordchoic18" data="{{...ques18}}"/>
+  </block>
+  <!--第十九题-->
+  <block wx:elif="{{count==19}}">
+    <template is="wordchoic19" data="{{...ques19}}"/>
+  </block>
+  <!--第二十题-->
+  <block wx:elif="{{count==20}}">
+    <template is="wordchoic20" data="{{...ques20}}"/>
+  </block>
+
+
+
+
+
+
+  <!--button-->
+  <button class='startAnswer' hover-class='click' bindtap='next'>
+    {{anniu}}
+  </button> 
+</view>

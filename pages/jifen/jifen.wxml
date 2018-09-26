@@ -1,0 +1,10 @@
+<view class='bg'>
+  <view class='head1'>
+   
+  </view>
+  <view class='fenshu1'>
+    <view class='fenshu2'>
+      <text class='fenshu3'>{{point}}</text>
+    </view>
+  </view>
+</view>
