@@ -93,7 +93,7 @@ Page({
       let my_xz = wx.getStorageSync('mydata');
       wx.showModal({
         title: 'Warning',
-        content: '你已经答过题了,可再次答题但不计分数\n分数为：' + score + '\n之前提交的选择是：\n' + my_xz[0] + my_xz[1] + my_xz[2] + my_xz[3] + my_xz[4] + '\n' + my_xz[5] + my_xz[6] + my_xz[7] + my_xz[8] + my_xz[9] + '\n' + my_xz[10] + my_xz[11] + my_xz[12] + my_xz[13] + my_xz[14]+ '\n' + my_xz[15] + my_xz[16] + my_xz[17] + my_xz[18] + my_xz[19],
+        content: '你已经答过题了,可再次参加但不计分数\n分数为：' + score,
         success: function (yes) {
           console.log(yes);
           that.sendUserInfoToServer();

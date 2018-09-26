@@ -41,10 +41,10 @@ Page({
       stem: "3.【再送一波】Re最近流行跑跑，请选出在跑跑卡丁车《城镇手指》地图中，时间最短的跑图路线",
       items0: [
         { name: '0:A', value: 'https://moetu.fastmirror.org/images/2018/09/21/----229276ceaa1445072.png', op: 'A.', checked: '' },
-        { name: '0:B', value: 'https://moetu.fastmirror.org/images/2018/09/21/----39a66bbc844045e66.png', op: 'B.', checked: '' },
+        { name: '1:B', value: 'https://moetu.fastmirror.org/images/2018/09/21/----39a66bbc844045e66.png', op: 'B.', checked: '' },
       ],
       items1: [
-        { name: '1:C', value: 'https://moetu.fastmirror.org/images/2018/09/21/---aa614fadf1baa1c1.png', op: 'C.', checked: ''},
+        { name: '0:C', value: 'https://moetu.fastmirror.org/images/2018/09/21/---aa614fadf1baa1c1.png', op: 'C.', checked: ''},
         { name: '0:D', value: 'https://moetu.fastmirror.org/images/2018/09/21/654d0c18eb9bd0131865a7b97caf7a5aae3b4472364461c1.png', op: 'D.', checked: ''},
       ],
     },
@@ -141,7 +141,7 @@ Page({
       ],
       items1: [
         { name: '0:C', value: 'https://moetu.fastmirror.org/images/2018/09/21/2793eff828f28b8547f05bc82ef9622d65b5a977d25330ca.png', op: 'C.\n姑\n姑', checked: '' },
-        { name: '0:D', value: 'https://moetu.fastmirror.org/images/2018/09/21/QQ2018092023303389e14ae333a1148b.jpg', op: 'D.\nqun\n酱', checked: ''},
+        { name: '1:D', value: 'https://moetu.fastmirror.org/images/2018/09/21/QQ2018092023303389e14ae333a1148b.jpg', op: 'D.\nqun\n酱', checked: ''},
       ],
     },
   //第12题数据
@@ -260,6 +260,7 @@ Page({
       ansflag[i-1]=1;
       console.log(ansflag[i-1]);
       my_xz[i-1] = str[1];
+      console.log(my_xz[i-1]);
     }
     else
     {
@@ -267,6 +268,7 @@ Page({
       ansflag[i-1]=0;
       console.log(ansflag[i-1]);
       my_xz[i - 1] = str[1];
+      console.log(my_xz[i - 1]);
     }
   },
   

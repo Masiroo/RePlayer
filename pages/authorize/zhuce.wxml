@@ -1,5 +1,8 @@
 <view class="container">
-    <view style='width:100%;padding-left:30rpx;font-size: 28rpx;margin-top:30rpx;'>1、同意当前小程序获取我的微信头像；</view>
-    <view style='width:100%;padding-left:30rpx;font-size: 28rpx;margin-top:30rpx;'>2、同意当前小程序获取我的微信昵称等其他信息；</view>
+    <view style='width:100%;padding-left:30rpx;font-size: 28rpx;margin-top:30rpx;'>1、每个人只有一次答题计分机会；</view>
+    <view style='width:100%;padding-left:30rpx;font-size: 28rpx;margin-top:30rpx;'>2、再次参加可查看分数以及之前的选项；</view>
+    <view style='width:100%;padding-left:30rpx;font-size: 28rpx;margin-top:30rpx;'>3、参加成功后凭分数截图找群主捏捏鸡领取奖励与称号；</view>
+    <view style='width:100%;padding-left:30rpx;font-size: 28rpx;margin-top:30rpx;'>4、总共20题；</view>
+    <view style='width:100%;padding-left:30rpx;font-size: 28rpx;margin-top:30rpx;'>Tip: 标题图片可能隐藏着某种答案；</view>
     <button  bindtap="bindstart" class="save-btn" hover-class='click'>授权登录</button>
 </view>
