@@ -312,12 +312,14 @@ Page({
       if(i!=1)
       {
         i=i-1;
-        this.setData({ count: i })
+        this.setData({ count: i });
+       
         if(ansflag[i-1]==1){
+          
           app.globalDate.sum -= 1;
           console.log("sum: ", app.globalDate.sum);
         }
-        
+        ansflag[i - 1] = '2';
       }
   },
 
@@ -335,6 +337,10 @@ Page({
 
   onLoad: function() {
     app.globalDate.sum =0;
+    for(var j=0;j<20;j++)
+    {
+      ansflag[j] =2;
+    }
     let cmp = wx.getStorageSync('complete');
     if(cmp == 1)
     {

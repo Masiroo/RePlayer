@@ -765,10 +765,6 @@
     <template is="wordchoic20" data="{{...ques20}}"/>
   </block>
 
-
-
-
-
 <view class='shangxia'>
   <!--button-->
 
